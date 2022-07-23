@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.container{
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+  /*align-items: stretch; /*It streches according to the one that has more content {start, center, end, stretch}*/
+  /*justify-content: space-evenly;*/
+  /*gap: 10px gives us the same result as line 21, 22*/
+  /*grid-auto-rows: 200px;  with this we set all rows the same size regardless of the content*/
+  /*grid-auto-rows: minmax(100px, auto); /*sets a min or max*/
+  /*grid-template-rows: 200px 100px 200px; /*we can use pixels, percentage or fractions*/
+  /*grid-template-rows: repeat(3, 1fr); /*we can use pixels, percentage or fractions*/
+}
+
+.item{
+  background: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+
+}
+/*align the items (divs) by itself*/
+/*.item:nth-of-type(2)
+{
+  height: 100px;
+  width: 100px;
+  
+  align-self: center;
+  justify-self: center;
+}
+*/
+
+/*span items accross rows*/
+
+/*Use the browser gird option in the console to see the numbers of each grid*/
+
+/*.item:nth-of-type(1)
+{
+  background: #000;
+  grid-column: 1/3
+  /*grid-column-start: 1;
+  grid-column-end: 3;*/
+}
+/*
+.item:nth-of-type(3)
+{
+  background: #333;
+  grid-row: 2/4;
+}
+
+.item:nth-of-type(4)
+{
+  background: #333;
+  grid-row: 2/4;
+}
+*/
+
+/*Responsiveness*/
+@media (max-width: 500px)
+{
+  .container
+  {
+      grid-template-columns: 1fr;
+  }
+}
